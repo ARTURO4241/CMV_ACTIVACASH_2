@@ -88,7 +88,7 @@ st.title("FUNNEL PROTOTIPE")
 
 #"""##FUNNEL"""
 
-st.markdown(f':cry: FUNELL')
+st.markdown(f': FUNELL')
 
 LISTA_PASOS=[]
 LISTA_VALORES=[]
@@ -102,8 +102,8 @@ LISTA_PASOS=list(map(ULTIMA_PANTALLA,LISTA_PASOS))
 data = dict(
     number=LISTA_VALORES,
     stage=LISTA_PASOS)
-fig = px.funnel(data, x='number', y='stage')
-fig.show()
+#fig = px.funnel(data, x='number', y='stage')
+#fig.show()
 #st.plotly_chart(fig, use_container_width=False, sharing="streamlit", theme="streamlit") # de esta forma se va a mostrar el dataframe en Streamlit
 
 #"""##BARRAS DE ACTIVIDAD"""
@@ -127,8 +127,8 @@ for i in range(0,len(fechas)-1):
 
 # Datos de muestra
 df = pd.DataFrame(list(zip(x,y)),columns=['FECHA','FRECUENCIA'])
-fig = px.bar(df, x = 'FECHA', y = 'FRECUENCIA')
-fig.show()
+#fig = px.bar(df, x = 'FECHA', y = 'FRECUENCIA')
+#fig.show()
 #st.plotly_chart(fig, use_container_width=False, sharing="streamlit", theme="streamlit", **kwargs) # de esta forma se va a mostrar el dataframe en Streamlit
 
 # Datos
