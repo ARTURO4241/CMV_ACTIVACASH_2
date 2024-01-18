@@ -16,7 +16,7 @@ import numpy as np
 #import plotly.express as px
 from datetime import datetime, timedelta
 
-pip.main(["install","openpyxl"])
+#pip.main(["install","openpyxl"])
 
 """#METODOS"""
 
@@ -155,7 +155,7 @@ TEMPORAL=TEMPORAL.sort_values(by='paso')
 TEMPORAL=TEMPORAL.reset_index(drop=True)
 TEMPORAL=TEMPORAL.rename(columns={'numero_socio':'NUMERO_SOCIO','celular':'CELULAR','ultima_pantalla':'ULTIMA_PANTALLA','paso':'PASO'})
 #TEMPORAL.to_excel('EN PROCESO.xlsx')
-TEMPORAL
+st.write(TEMPORAL)
 
 PROCESOS=TEMPORAL.pivot_table( ['FECHA'], ['PASO','NOMBRE','NUMERO_SOCIO','CELULAR'])
 #PROCESOS=PROCESOS.sort_values(by='FECHA',ascending=False)
@@ -172,7 +172,8 @@ TEMPORAL=TEMPORAL.sort_values(by='paso')
 TEMPORAL=TEMPORAL.reset_index(drop=True)
 TEMPORAL=TEMPORAL.rename(columns={'numero_socio':'NUMERO_SOCIO','celular':'CELULAR','ultima_pantalla':'ULTIMA_PANTALLA','paso':'PASO'})
 #TEMPORAL.to_excel('APROBADOS.xlsx')
-TEMPORAL
+st.write(TEMPORAL)
+
 
 """##RECHAZADO"""
 
@@ -184,7 +185,8 @@ TEMPORAL=TEMPORAL.sort_values(by='mensaje_rechazo')
 TEMPORAL=TEMPORAL.reset_index(drop=True)
 TEMPORAL=TEMPORAL.rename(columns={'numero_socio':'NUMERO_SOCIO','celular':'CELULAR','mensaje_rechazo':'MENSAJE_RECHAZO','Icc':'ICC','BcScore':'BCSCORE','EstimadorIngresos':'ESTIMADOR_INGRESOS','paso':'PASO'})
 #TEMPORAL.to_excel('RECHAZADO.xlsx')
-TEMPORAL
+st.write(TEMPORAL)
+
 
 RECHAZOS=TEMPORAL.pivot_table(['ICC','BCSCORE','ESTIMADOR_INGRESOS','FECHA'],['PASO','MENSAJE_RECHAZO','NOMBRE','NUMERO_SOCIO','CELULAR'])
 RECHAZOS=RECHAZOS.sort_values(by='FECHA',ascending=False)
@@ -199,4 +201,5 @@ TEMPORAL=TEMPORAL.sort_values(by='mensaje_rechazo')
 TEMPORAL=TEMPORAL.reset_index(drop=True)
 TEMPORAL=TEMPORAL.rename(columns={'numero_socio':'NUMERO_SOCIO','celular':'CELULAR','mensaje_rechazo':'MENSAJE_RECHAZO','paso':'PASO'})
 #TEMPORAL.to_excel('INDEFINIDO.xlsx')
-TEMPORAL
+st.write(TEMPORAL)
+
