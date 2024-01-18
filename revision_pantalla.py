@@ -89,7 +89,7 @@ st.title("FUNNEL PROTOTIPE")
 
 #"""##FUNNEL"""
 
-st.markdown(f': happy : FUNELL')
+st.markdown(f':happy : FUNELL')
 
 LISTA_PASOS=[]
 LISTA_VALORES=[]
