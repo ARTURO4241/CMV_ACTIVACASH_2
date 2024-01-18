@@ -1,6 +1,4 @@
 '/home/adminuser/venv/bin/python -m pip install --upgrade pip'
--m pip 
-
 import streamlit as st
 import pandas as pd
 import numpy as np
