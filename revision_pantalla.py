@@ -14,14 +14,14 @@ import numpy as np
 import pip
 pip.main(["install","openpyxl"])
 
-pip.install plotly_express
+#pip.install plotly_express
 
 #import matplotlib.pyplot as plt
 #import seaborn as sns
-import plotly.express as px
+#import plotly.express as px
 from datetime import datetime, timedelta
 
-"""#METODOS"""
+#"""#METODOS"""
 
 def nombres(a,b,c):
   return str(a)+' '+str(b)+' '+str(c)
@@ -68,12 +68,12 @@ def ULTIMA_PANTALLA(v):
   elif v==11:
     return 'MESA DE CONTROL'
 
-"""#ARCHIVO"""
+#"""#ARCHIVO"""
 
 DF=pd.read_excel('ONBOARDING ACTIVA 2 AL 19 ENERO.xlsx',sheet_name='Hoja1',usecols=['nombre_s','apellido_paterno','apellido_materno','numero_socio','celular','evaluado','aprobado','mensaje_rechazo','paso_proceso','Icc','BcScore','EstimadorIngresos','fecha_created_at'])
 DF=DF.rename(columns={'paso_proceso':'paso','fecha_created_at':'FECHA'})
 
-"""LIMPIEZA"""
+#"""LIMPIEZA"""
 
 DF=DF.merge(maximizador_pantalla(DF),on='numero_socio',how='left')
 DF=DF.drop('paso',axis=1)
@@ -88,11 +88,11 @@ DF=DF[['NOMBRE','numero_socio','celular','evaluado','aprobado','mensaje_rechazo'
 
 DF=DF.fillna('VACIO')
 
-"""#CODIGO"""
+#"""#CODIGO"""
 
 st.title("FUNNEL PROTOTIPE")
 
-"""##FUNNEL"""
+#"""##FUNNEL"""
 
 st.markdown(f':cry: FUNELL')
 
@@ -112,7 +112,7 @@ fig = px.funnel(data, x='number', y='stage')
 fig.show()
 #st.plotly_chart(fig, use_container_width=False, sharing="streamlit", theme="streamlit") # de esta forma se va a mostrar el dataframe en Streamlit
 
-"""##BARRAS DE ACTIVIDAD"""
+#"""##BARRAS DE ACTIVIDAD"""
 
 st.markdown(f':cry: GRAFICA DE ACTIVIDAD')
 
@@ -148,7 +148,7 @@ fig.show()
 # Mostrar el gráfico
 #plt.show()
 
-"""##EN PROCESO"""
+#"""##EN PROCESO"""
 
 st.markdown(f':cry: ESTOS SOCIOS NO TERMINARON EL PROCESO')
 
@@ -165,7 +165,7 @@ PROCESOS=TEMPORAL.pivot_table( ['FECHA'], ['PASO','NOMBRE','NUMERO_SOCIO','CELUL
 #PROCESOS.to_excel('PROCESOS_PIVOTE.xlsx')
 PROCESOS
 
-"""##APROBADOS"""
+#"""##APROBADOS"""
 
 st.markdown(f':cry: LOS SIGUIENTES SOCIOS TERMINARON EL PROCESO')
 
@@ -178,7 +178,7 @@ TEMPORAL=TEMPORAL.rename(columns={'numero_socio':'NUMERO_SOCIO','celular':'CELUL
 st.write(TEMPORAL)
 
 
-"""##RECHAZADO"""
+#"""##RECHAZADO"""
 
 st.markdown(f':cry: LOS SIGUIENTES SOCIOS FUERON RECHAZADOS EN EL PROCESO')
 
@@ -196,7 +196,7 @@ RECHAZOS=RECHAZOS.sort_values(by='FECHA',ascending=False)
 #RECHAZOS.to_excel('RECHAZOS_PIVOTE.xlsx')
 RECHAZOS
 
-"""##INDEFINIDO"""
+#"""##INDEFINIDO"""
 
 TEMPORAL=DF[(DF['aprobado']==0)&(DF['evaluado']==0)]
 TEMPORAL=TEMPORAL[['NOMBRE','numero_socio','celular','mensaje_rechazo','paso','FECHA']]
