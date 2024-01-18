@@ -9,7 +9,6 @@ Original file is located at
 #LIBRERIAS
 """
 
-pip install streamlit
 
 import streamlit as st
 import pandas as pd
