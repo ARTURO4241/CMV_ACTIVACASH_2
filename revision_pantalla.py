@@ -9,7 +9,7 @@ Original file is located at
 #LIBRERIAS
 """
 
-pip.install plotly 
+pip install plotly==5.18.0
 
 import streamlit as st
 import pandas as pd
