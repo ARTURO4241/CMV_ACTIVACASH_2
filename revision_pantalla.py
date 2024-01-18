@@ -14,7 +14,7 @@ import numpy as np
 import pip
 pip.main(["install","openpyxl"])
 
-pip.install.plotly
+pip install plotly_express==0.4.0
 
 #import matplotlib.pyplot as plt
 #import seaborn as sns
