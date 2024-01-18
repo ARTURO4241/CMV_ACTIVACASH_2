@@ -13,7 +13,7 @@ import pandas as pd
 import numpy as np
 #import matplotlib.pyplot as plt
 #import seaborn as sns
-import plotly.express as px
+#import plotly.express as px
 from datetime import datetime, timedelta
 
 pip.main(["install","openpyxl"])
@@ -107,7 +107,7 @@ data = dict(
     stage=LISTA_PASOS)
 fig = px.funnel(data, x='number', y='stage')
 fig.show()
-st.plotly_chart(fig, use_container_width=False, sharing="streamlit", theme="streamlit") # de esta forma se va a mostrar el dataframe en Streamlit
+#st.plotly_chart(fig, use_container_width=False, sharing="streamlit", theme="streamlit") # de esta forma se va a mostrar el dataframe en Streamlit
 
 """##BARRAS DE ACTIVIDAD"""
 
@@ -132,7 +132,7 @@ for i in range(0,len(fechas)-1):
 df = pd.DataFrame(list(zip(x,y)),columns=['FECHA','FRECUENCIA'])
 fig = px.bar(df, x = 'FECHA', y = 'FRECUENCIA')
 fig.show()
-st.plotly_chart(fig, use_container_width=False, sharing="streamlit", theme="streamlit", **kwargs) # de esta forma se va a mostrar el dataframe en Streamlit
+#st.plotly_chart(fig, use_container_width=False, sharing="streamlit", theme="streamlit", **kwargs) # de esta forma se va a mostrar el dataframe en Streamlit
 
 # Datos
 #x = fechas[0:len(ACTIVIDAD)]
