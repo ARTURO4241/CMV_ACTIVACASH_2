@@ -11,12 +11,13 @@ Original file is located at
 import streamlit as st
 import pandas as pd
 import numpy as np
+import pip
 #import matplotlib.pyplot as plt
 #import seaborn as sns
-#import plotly.express as px
+import plotly.express as px
 from datetime import datetime, timedelta
 
-#pip.main(["install","openpyxl"])
+pip.main(["install","openpyxl"])
 
 """#METODOS"""
 
