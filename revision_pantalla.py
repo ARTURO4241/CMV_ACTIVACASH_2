@@ -1,3 +1,6 @@
+'/home/adminuser/venv/bin/python -m pip install --upgrade pip'
+-m pip 
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -88,7 +91,7 @@ st.title("FUNNEL PROTOTIPE")
 
 #"""##FUNNEL"""
 
-st.markdown(f': sad: FUNELL')
+st.markdown(f': happy : FUNELL')
 
 LISTA_PASOS=[]
 LISTA_VALORES=[]
@@ -115,9 +118,6 @@ fecha_maxima=DF['FECHA'].max()
 fechas=[]
 dias_a_sumar = 1
 fechita=fecha_minima
-
-timedelta(days=dias_a_sumar)
-
 
 while fechita<=fecha_maxima:
   fechas.append(fechita)
