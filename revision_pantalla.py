@@ -15,7 +15,7 @@ import pip
 #import matplotlib.pyplot as plt
 #import seaborn as sns
 
-pip.install plotly
+pip.install.plotly
 
 import plotly.express as px
 from datetime import datetime, timedelta
