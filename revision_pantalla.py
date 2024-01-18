@@ -73,7 +73,7 @@ def ULTIMA_PANTALLA(v):
 
 #DF=pd.read_excel('ONBOARDING ACTIVA 2 AL 19 ENERO.xlsx',sheet_name='Hoja1',usecols=['nombre_s','apellido_paterno','apellido_materno','numero_socio','celular','evaluado','aprobado','mensaje_rechazo','paso_proceso','Icc','BcScore','EstimadorIngresos','fecha_created_at'])
 #
-DF=pd.read_csv('ONBOARDING ACTIVA 2 AL 19 ENERO.xlsx',encoging='latin-1',usecols=['nombre_s','apellido_paterno','apellido_materno','numero_socio','celular','evaluado','aprobado','mensaje_rechazo','paso_proceso','Icc','BcScore','EstimadorIngresos','fecha_created_at'])
+DF=pd.read_csv('ONBOARDING ACTIVA 2 AL 19 ENERO.csv',encoging='latin-1',usecols=['nombre_s','apellido_paterno','apellido_materno','numero_socio','celular','evaluado','aprobado','mensaje_rechazo','paso_proceso','Icc','BcScore','EstimadorIngresos','fecha_created_at'])
 
 DF=DF.rename(columns={'paso_proceso':'paso','fecha_created_at':'FECHA'})
 
