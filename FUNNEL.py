@@ -21,15 +21,15 @@ st.image('BARRAS.png',caption='EVOLUCION DE LA ACTIVIDAD')
 
 st.markdown(f':CAIDOS')
 df=pd.read_csv('EN PROCESO.csv',encoding='latin-1')
-df=pd.drop('Unnamed:0',axis=1)
+
 st.write(df)
 
 st.markdown(f':APROBADOS')
 df=pd.read_csv('APROBADOS.csv',encoding='latin-1')
-df=pd.drop('Unnamed:0',axis=1)
+
 st.write(df)
 
 st.markdown(f':RECHAZADOS')
 df=pd.read_csv('RECHAZADO.csv',encoding='latin-1')
-df=pd.drop('Unnamed:0',axis=1)
+
 st.write(df)
