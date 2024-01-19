@@ -16,8 +16,6 @@ st.title("PROTOTIPO FUNNELL")
 #df_2=pd.read_csv('APROBADOS.csv')
 #st.write(df_2)
 
-st.title(f'FUNNEL')
-
 st.markdown(f' FUNNEL')
 st.image('FUNNEL.png',caption='ACTIVIDAD REGISTRADA PARA CADA UNA DE LAS PANTALLAS')
 
