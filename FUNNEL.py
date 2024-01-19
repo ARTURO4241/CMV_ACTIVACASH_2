@@ -15,21 +15,21 @@ st.title(f':FUNNEL')
 st.image('FUNNEL.png',caption='ACTIVIDAD REGISTRADA PARA CADA UNA DE LAS PANTALLAS')
 
 
-st.title(f': AFLUENCIA DIARIA EN EL UNBORDING 2.0')
+st.markdown(f':AFLUENCIA DIARIA EN EL UNBORDING 2.0')
 st.image('BARRAS.png',caption='EVOLUCION DE LA ACTIVIDAD')
 
 
-st.title(f':CAIDOS')
+st.markdown(f':CAIDOS')
 df=pd.read_csv('EN PROCESO.csv',encoding='latin-1')
 df=pd.drop('Unnamed:0',axis=1)
 st.write(df)
 
-st.title(f':APROBADOS')
+st.markdown(f':APROBADOS')
 df=pd.read_csv('APROBADOS.csv',encoding='latin-1')
 df=pd.drop('Unnamed:0',axis=1)
 st.write(df)
 
-st.title(f':RECHAZADOS')
+st.markdown(f':RECHAZADOS')
 df=pd.read_csv('RECHAZADO.csv',encoding='latin-1')
 df=pd.drop('Unnamed:0',axis=1)
 st.write(df)
