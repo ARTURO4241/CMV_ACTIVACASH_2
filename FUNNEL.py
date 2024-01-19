@@ -12,6 +12,8 @@ st.title("PROTOTIPO FUNNELL")
 #st.write(df_2)
 
 st.title(f':FUNNEL')
+
+st.markdown(f':neutral_face: FUNNEL')
 st.image('FUNNEL.png',caption='ACTIVIDAD REGISTRADA PARA CADA UNA DE LAS PANTALLAS')
 
 
