@@ -63,7 +63,7 @@ df=df.drop('LATITUD',axis=1)
 df=df.drop('LONGITUD',axis=1)
 st.write(df)
 
-df=COORDENADAS_CAIDOS.append(COORDENADAS_RECHAZO,ignore_index=True)
+df=COORDENADAS_CAIDOS.append(COORDENADAS_RECHAZO)
 df=df.dropna()
 
 st.markdown(f' RECHAZADOS')
