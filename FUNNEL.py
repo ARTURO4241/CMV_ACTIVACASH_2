@@ -36,37 +36,7 @@ st.image('FUNNEL.png',caption='ACTIVIDAD REGISTRADA PARA CADA UNA DE LAS PANTALL
 st.markdown(f' AFLUENCIA DIARIA EN EL UNBORDING 2.0')
 st.image('BARRAS.png',caption='EVOLUCION DE LA ACTIVIDAD')
 
-st.markdown(f' RESUMEN')
-df=pd.read_csv('RESUMEN.csv',encoding='latin-1')
-df=df.drop('Unnamed: 0',axis=1)
-st.text('Con la finalidad de presentar de manera rápida los resultados reelevantes acerca del uso de la app, se muestra a continuación una tabla de concentración.')
-st.write(df)
-
-st.markdown(f' CAIDOS')
-df=pd.read_csv('EN PROCESO.csv',encoding='latin-1')
-df=df.drop('Unnamed: 0',axis=1)
-df['NUMERO_SOCIO']=list(map(reemplazos,df['NUMERO_SOCIO']))
-df['CELULAR']=list(map(reemplazos,df['CELULAR']))
-COORDENADAS_CAIDOS=df[['LATITUD','LONGITUD']]
-df=df.drop('LATITUD',axis=1)
-df=df.drop('LONGITUD',axis=1)
-st.write(df)
-
-
-st.markdown(f' RECHAZADOS')
-df=pd.read_csv('RECHAZADO.csv',encoding='latin-1')
-df=df.drop('Unnamed: 0',axis=1)
-df['NUMERO_SOCIO']=list(map(reemplazos,df['NUMERO_SOCIO']))
-df['CELULAR']=list(map(reemplazos,df['CELULAR']))
-COORDENADAS_RECHAZO=df[['LATITUD','LONGITUD']]
-df=df.drop('LATITUD',axis=1)
-df=df.drop('LONGITUD',axis=1)
-st.write(df)
-
-df=COORDENADAS_CAIDOS.append(COORDENADAS_RECHAZO)
-df=df.dropna()
-
-st.markdown(f' RECHAZADOS')
+df=pd.read_csv('COORDENADAS.csv',encoding='latin-1')
 df=df.rename(columns={'LATITUD':'lat','LONGITUD':'lon'})
 chart_data = df
  
@@ -98,4 +68,33 @@ st.pydeck_chart(pdk.Deck(
         ),
     ],
 ))
+
+
+st.markdown(f' RESUMEN')
+df=pd.read_csv('RESUMEN.csv',encoding='latin-1')
+df=df.drop('Unnamed: 0',axis=1)
+st.text('Con la finalidad de presentar de manera rápida los resultados reelevantes acerca del uso de la app, se muestra a continuación una tabla de concentración.')
+st.write(df)
+
+st.markdown(f' CAIDOS')
+df=pd.read_csv('EN PROCESO.csv',encoding='latin-1')
+df=df.drop('Unnamed: 0',axis=1)
+df['NUMERO_SOCIO']=list(map(reemplazos,df['NUMERO_SOCIO']))
+df['CELULAR']=list(map(reemplazos,df['CELULAR']))
+COORDENADAS_CAIDOS=df[['LATITUD','LONGITUD']]
+df=df.drop('LATITUD',axis=1)
+df=df.drop('LONGITUD',axis=1)
+st.write(df)
+
+
+st.markdown(f' RECHAZADOS')
+df=pd.read_csv('RECHAZADO.csv',encoding='latin-1')
+df=df.drop('Unnamed: 0',axis=1)
+df['NUMERO_SOCIO']=list(map(reemplazos,df['NUMERO_SOCIO']))
+df['CELULAR']=list(map(reemplazos,df['CELULAR']))
+COORDENADAS_RECHAZO=df[['LATITUD','LONGITUD']]
+df=df.drop('LATITUD',axis=1)
+df=df.drop('LONGITUD',axis=1)
+st.write(df)
+
 
