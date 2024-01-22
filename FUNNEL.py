@@ -1,11 +1,4 @@
-pip.main(['install', 'plotly_express'])
-pip.main(["install","openpyxl"])
-import pandas as pd
-import numpy as np
-import plotly.express as px
 from datetime import datetime, timedelta
-import streamlit as st
-
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -16,7 +9,7 @@ def reemplazos(v):
   v=v.replace(',','')
   return v
 
-
+pip.main(['install', 'plotly_express'])
 pip.main(["install","openpyxl"])
 
 st.title("PROTOTIPO FUNNELL")
