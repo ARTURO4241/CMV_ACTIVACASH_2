@@ -1,4 +1,3 @@
-pip.main(['install', 'matplotlib'])
 pip.main(['install', 'plotly'])
 pip.main(['install', 'plotly_express'])
 pip.main(["install","openpyxl"])
