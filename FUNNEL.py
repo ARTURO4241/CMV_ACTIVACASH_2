@@ -18,7 +18,16 @@ st.text('La presente página permite visualizar el comportamiento generalizado d
 #st.write(df_2)
 
 st.markdown(f' FUNNEL')
-st.image('FUNNEL.png',caption='ACTIVIDAD REGISTRADA PARA CADA UNA DE LAS PANTALLAS')
+df=pd.read_csv('FUNEL.csv',encoding='latin-1')
+LISTA_VALORES=df['VALOR']
+LISTA_PASOS=df['PASO']
+data = dict(
+    number=LISTA_VALORES,
+    stage=LISTA_PASOS)
+fig = px.funnel(data, x='number', y='stage')
+st.ploty_chart(fig)
+#fig.show()
+#st.image('FUNNEL.png',caption='ACTIVIDAD REGISTRADA PARA CADA UNA DE LAS PANTALLAS')
 
 
 st.markdown(f' AFLUENCIA DIARIA EN EL UNBORDING 2.0')
