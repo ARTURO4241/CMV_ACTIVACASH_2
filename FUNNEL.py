@@ -82,9 +82,6 @@ df=pd.read_csv('EN PROCESO.csv',encoding='latin-1')
 df=df.drop('Unnamed: 0',axis=1)
 df['NUMERO_SOCIO']=list(map(reemplazos,df['NUMERO_SOCIO']))
 df['CELULAR']=list(map(reemplazos,df['CELULAR']))
-COORDENADAS_CAIDOS=df[['LATITUD','LONGITUD']]
-df=df.drop('LATITUD',axis=1)
-df=df.drop('LONGITUD',axis=1)
 st.write(df)
 
 
@@ -93,9 +90,6 @@ df=pd.read_csv('RECHAZADO.csv',encoding='latin-1')
 df=df.drop('Unnamed: 0',axis=1)
 df['NUMERO_SOCIO']=list(map(reemplazos,df['NUMERO_SOCIO']))
 df['CELULAR']=list(map(reemplazos,df['CELULAR']))
-COORDENADAS_RECHAZO=df[['LATITUD','LONGITUD']]
-df=df.drop('LATITUD',axis=1)
-df=df.drop('LONGITUD',axis=1)
 st.write(df)
 
 
