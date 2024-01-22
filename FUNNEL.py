@@ -47,7 +47,7 @@ df=pd.read_csv('EN PROCESO.csv',encoding='latin-1')
 df=df.drop('Unnamed: 0',axis=1)
 df['NUMERO_SOCIO']=list(map(reemplazos,df['NUMERO_SOCIO']))
 df['CELULAR']=list(map(reemplazos,df['CELULAR']))
-COOREDENADAS_CAIDOS=df[['LATITUD','LONGITUD']]
+COORDENADAS_CAIDOS=df[['LATITUD','LONGITUD']]
 df=df.drop('LATITUD',axis=1)
 df=df.drop('LONGITUD',axis=1)
 st.write(df)
@@ -58,19 +58,17 @@ df=pd.read_csv('RECHAZADO.csv',encoding='latin-1')
 df=df.drop('Unnamed: 0',axis=1)
 df['NUMERO_SOCIO']=list(map(reemplazos,df['NUMERO_SOCIO']))
 df['CELULAR']=list(map(reemplazos,df['CELULAR']))
-COOREDENADAS_RECHAZO=df[['LATITUD','LONGITUD']]
+COORDENADAS_RECHAZO=df[['LATITUD','LONGITUD']]
 df=df.drop('LATITUD',axis=1)
 df=df.drop('LONGITUD',axis=1)
 st.write(df)
 
-#COORDENADAS_CAIDOS=COORDENADAS_CAIDOS.dropna()
-#COOREDENADAS_RECHAZO=COOREDENADAS_RECHAZO.dropna()
+df=COORDENADAS_CAIDOS.append(COORDENADAS_RECHAZO,ignore_index=True)
+df=df.dropna()
 
-
- 
-chart_data = pd.DataFrame(
-   np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
-   columns=['lat', 'lon'])
+st.markdown(f' RECHAZADOS')
+df=df.rename(columns={'LATITUD':'lat','LONGITUD':'lon'})
+chart_data = df
  
 st.pydeck_chart(pdk.Deck(
     map_style=None,
@@ -95,7 +93,7 @@ st.pydeck_chart(pdk.Deck(
             'ScatterplotLayer',
             data=chart_data,
             get_position='[lon, lat]',
-            get_color='[200, 30, 0, 160]',
+            get_color='[0]',
             get_radius=200,
         ),
     ],
