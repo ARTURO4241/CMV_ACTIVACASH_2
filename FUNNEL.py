@@ -36,6 +36,7 @@ st.image('FUNNEL.png',caption='ACTIVIDAD REGISTRADA PARA CADA UNA DE LAS PANTALL
 st.markdown(f' AFLUENCIA DIARIA EN EL UNBORDING 2.0')
 st.image('BARRAS.png',caption='EVOLUCION DE LA ACTIVIDAD')
 
+st.text('Estos valores corresponden a los ingresos identificados en las siguientes ubicaciones.')
 df=pd.read_csv('COORDENADAS.csv',encoding='latin-1')
 df=df.rename(columns={'LATITUD':'lat','LONGITUD':'lon'})
 chart_data = df
