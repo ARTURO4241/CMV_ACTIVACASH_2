@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 import streamlit as st
 import pandas as pd
-import plotly.express as px
+#import plotly.express as px
 import pip 
 
 def reemplazos(v):
@@ -26,10 +26,10 @@ LISTA_PASOS=df['PASO']
 data = dict(
     number=LISTA_VALORES,
     stage=LISTA_PASOS)
-fig = px.funnel(data, x='number', y='stage')
+#fig = px.funnel(data, x='number', y='stage')
 st.ploty_chart(fig)
 #fig.show()
-#st.image('FUNNEL.png',caption='ACTIVIDAD REGISTRADA PARA CADA UNA DE LAS PANTALLAS')
+st.image('FUNNEL.png',caption='ACTIVIDAD REGISTRADA PARA CADA UNA DE LAS PANTALLAS')
 
 
 st.markdown(f' AFLUENCIA DIARIA EN EL UNBORDING 2.0')
