@@ -27,7 +27,7 @@ data = dict(
     number=LISTA_VALORES,
     stage=LISTA_PASOS)
 #fig = px.funnel(data, x='number', y='stage')
-st.ploty_chart(fig)
+#st.ploty_chart(fig)
 #fig.show()
 st.image('FUNNEL.png',caption='ACTIVIDAD REGISTRADA PARA CADA UNA DE LAS PANTALLAS')
 
