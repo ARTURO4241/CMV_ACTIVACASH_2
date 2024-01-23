@@ -79,8 +79,12 @@ st.pydeck_chart(pdk.Deck(
 st.markdown(f' RESUMEN')
 df=pd.read_csv('RESUMEN.csv',encoding='latin-1')
 df=df.drop('Unnamed: 0',axis=1)
-st.text('Con la finalidad de presentar de manera rápida los resultados reelevantes acerca del uso de la app, se muestra a continuación una tabla de concentración.')
+st.text('Con la finalidad de presentar de manera rápida los resultados reelevantes acerca del')
+st.text('uso de la app, se muestra a continuación una tabla de concentración.')
 st.write(df)
+st.text('Cuya representación gráfica es la siguiente:')
+fig=px.pie(df,values='SOCIOS',names='PROCESO')#,width=500,height=400)
+st.plotly_chart(fig)
 
 
 st.markdown(f' POR EVALUAR')
