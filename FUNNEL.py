@@ -31,11 +31,11 @@ data = dict(
 #st.ploty_chart(fig)
 #fig.show()
 st.image('FUNNEL.png',caption='ACTIVIDAD REGISTRADA PARA CADA UNA DE LAS PANTALLAS')
-#data = dict(
- #   number=[39, 27.4, 20.6, 11, 2],
-  #  stage=["Website visit", "Downloads", "Potential customers", "Requested price", "invoice sent"])
-#fig = px.funnel(data, x='number', y='stage')
-#fig.show()
+data = dict(
+    number=[39, 27.4, 20.6, 11, 2],
+    stage=["Website visit", "Downloads", "Potential customers", "Requested price", "invoice sent"])
+fig = px.funnel(data, x='number', y='stage')
+fig.show()
 
 
 st.markdown(f' AFLUENCIA DIARIA EN EL UNBORDING 2.0')
@@ -82,7 +82,16 @@ df=df.drop('Unnamed: 0',axis=1)
 st.text('Con la finalidad de presentar de manera rápida los resultados reelevantes acerca del uso de la app, se muestra a continuación una tabla de concentración.')
 st.write(df)
 
-st.markdown(f' CAIDOS')
+
+st.markdown(f' POR EVALUAR')
+df=pd.read_csv('POR EVALUAR.csv',encoding='latin-1')
+df=df.drop('Unnamed: 0',axis=1)
+df['NUMERO_SOCIO']=list(map(reemplazos,df['NUMERO_SOCIO']))
+df['CELULAR']=list(map(reemplazos,df['CELULAR']))
+st.write(df)
+
+
+st.markdown(f' EN PROCESO')
 df=pd.read_csv('EN PROCESO.csv',encoding='latin-1')
 df=df.drop('Unnamed: 0',axis=1)
 df['NUMERO_SOCIO']=list(map(reemplazos,df['NUMERO_SOCIO']))
