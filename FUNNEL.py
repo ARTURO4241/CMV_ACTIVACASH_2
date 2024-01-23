@@ -35,7 +35,7 @@ st.plotly_chart(fig)
 
 
 st.markdown(f' AFLUENCIA DIARIA EN EL UNBORDING 2.0')
-bar_chart = plotly.express.bar(df, 
+bar_chart = px.bar(df, 
                    x=df['VALOR'],
                    y=df['PASO'],
                    text ='FRECUENCIA',
