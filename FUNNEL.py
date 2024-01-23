@@ -79,10 +79,9 @@ st.pydeck_chart(pdk.Deck(
 st.markdown(f' RESUMEN')
 df=pd.read_csv('RESUMEN.csv',encoding='latin-1')
 df=df.drop('Unnamed: 0',axis=1)
-st.text('Con la finalidad de presentar de manera rápida los resultados reelevantes acerca del')
-st.text('uso de la app, se muestra a continuación una tabla de concentración.')
-st.write(df)
-st.text('Cuya representación gráfica es la siguiente:')
+st.text('Con la finalidad de presentar de manera rápida los resultados reelevantes acerca del uso de la app, se muestra a continuación esquema de concentración.')
+#st.write(df)
+#st.text('Los cuales poseen los siguientes valores porcentuales:')
 fig=px.pie(df,values='SOCIOS',names='PROCESO')#,width=500,height=400)
 st.plotly_chart(fig)
 
@@ -109,5 +108,21 @@ df=df.drop('Unnamed: 0',axis=1)
 df['NUMERO_SOCIO']=list(map(reemplazos,df['NUMERO_SOCIO']))
 df['CELULAR']=list(map(reemplazos,df['CELULAR']))
 st.write(df)
+
+st.markdown(f' SISTEMA OPERATIVO')
+df=pd.read_csv('SO.csv',encoding='latin-1')
+df=df.drop('Unnamed: 0',axis=1)
+st.text('Las visitas obtenidas corresponden al uso de los siguientes sistemas operativos.')
+fig=px.pie(df, values='FRECUENCIA', names='SISTEMA')#,width=500,height=400)
+st.plotly_chart(fig)
+
+st.markdown(f' NAVEGADOR')
+df=pd.read_csv('NAVEGADOR.csv',encoding='latin-1')
+df=df.drop('Unnamed: 0',axis=1)
+st.text('Como enfoque adicional se puede identificar el navegador implementado como se muestra a continuación.')
+fig=px.pie(df,values='FRECUENCIA',names='NAVEGADOR',width=500,height=400)
+#,width=500,height=400)
+st.plotly_chart(fig)
+
 
 
