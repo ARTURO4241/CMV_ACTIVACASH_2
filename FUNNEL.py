@@ -35,7 +35,14 @@ st.plotly_chart(fig)
 
 
 st.markdown(f' AFLUENCIA DIARIA EN EL UNBORDING 2.0')
-st.image('BARRAS.png',caption='EVOLUCION DE LA ACTIVIDAD')
+bar_chart = plotly.express.bar(df, 
+                   x=df['VALOR'],
+                   y=df['PASO'],
+                   text ='FRECUENCIA',
+                   color_discrete_sequence = ['#f5b632']*len(df),
+                   template = 'plotly_white')
+st.plotly_chart(bar_chart)
+#st.image('BARRAS.png',caption='EVOLUCION DE LA ACTIVIDAD')
 
 st.text('Estos valores corresponden a los ingresos identificados en las siguientes ubicaciones.')
 df=pd.read_csv('COORDENADAS.csv',encoding='latin-1')
