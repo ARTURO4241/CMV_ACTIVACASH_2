@@ -36,8 +36,9 @@ st.plotly_chart(fig)
 
 st.markdown(f' AFLUENCIA DIARIA EN EL UNBORDING 2.0')
 chart_data = pd.read_csv('FECHAS.csv',encoding='latin-1')
-#chart_data = chart_data.drop('Unnamed: 0',axis=1)
-st.bar_chart(chart_data)
+chart_data = chart_data.drop('Unnamed: 0',axis=1)
+st.write(df)
+#st.bar_chart(chart_data)
 #st.image('BARRAS.png',caption='EVOLUCION DE LA ACTIVIDAD')
 
 st.text('Estos valores corresponden a los ingresos identificados en las siguientes ubicaciones.')
