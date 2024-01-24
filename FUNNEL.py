@@ -34,7 +34,7 @@ fig = px.funnel(df, x=df['VALOR'], y=df['PASO'])
 st.plotly_chart(fig)
 
 
-st.markdown(f' AFLUENCIA DIARIA EN EL UNBORDING 2.0')
+st.markdown(f' AFLUENCIA DIARIA EN EL ONBORDING 2.0')
 chart_data = pd.read_csv('FECHAS.csv',encoding='latin-1')
 chart_data = chart_data.drop('Unnamed: 0',axis=1)
 chart_data = chart_data.set_index('FECHA')
