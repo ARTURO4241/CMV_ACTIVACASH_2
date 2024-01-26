@@ -124,5 +124,11 @@ fig=px.pie(df,values='FRECUENCIA',names='NAVEGADOR',width=500,height=400)
 #,width=500,height=400)
 st.plotly_chart(fig)
 
-
+st.markdown(f' MENSAJE DE RECHAZO')
+df=pd.read_csv('MENSAJE_RECHAZO.csv',encoding='latin-1')
+df=df.drop('Unnamed: 0',axis=1)
+st.text('Es posible identificar el motivo de rechazo por el cual el proceso se suspendió.')
+fig=px.pie(df,values='FRECUENCIA',names='MENSAJE_RECHAZO',width=500,height=400)
+#,width=500,height=400)
+st.plotly_chart(fig)
 
