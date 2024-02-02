@@ -76,14 +76,14 @@ st.pydeck_chart(pdk.Deck(
 ))
 
 
-st.markdown(f' RESUMEN')
-df=pd.read_csv('RESUMEN.csv',encoding='latin-1')
-df=df.drop('Unnamed: 0',axis=1)
-st.text('Con la finalidad de presentar de manera rápida los resultados reelevantes acerca del uso de la app, se muestra a continuación esquema de concentración.')
+#st.markdown(f' RESUMEN')
+#df=pd.read_csv('RESUMEN.csv',encoding='latin-1')
+#df=df.drop('Unnamed: 0',axis=1)
+#st.text('Con la finalidad de presentar de manera rápida los resultados reelevantes acerca del uso de la app, se muestra a continuación esquema de concentración.')
 #st.write(df)
 #st.text('Los cuales poseen los siguientes valores porcentuales:')
-fig=px.pie(df,values='SOCIOS',names='PROCESO')#,width=500,height=400)
-st.plotly_chart(fig)
+#fig=px.pie(df,values='SOCIOS',names='PROCESO')#,width=500,height=400)
+#st.plotly_chart(fig)
 
 
 st.markdown(f' POR EVALUAR')
@@ -124,11 +124,11 @@ fig=px.pie(df,values='FRECUENCIA',names='NAVEGADOR',width=500,height=400)
 #,width=500,height=400)
 st.plotly_chart(fig)
 
-st.markdown(f' MENSAJE DE RECHAZO')
-df=pd.read_csv('MENSAJE_RECHAZO.csv',encoding='latin-1')
-df=df.drop('Unnamed: 0',axis=1)
-st.text('Es posible identificar el motivo de rechazo por el cual el proceso se suspendió.')
-fig=px.pie(df,values='FRECUENCIA',names='MENSAJE_RECHAZO',width=750,height=500)
+#st.markdown(f' MENSAJE DE RECHAZO')
+#df=pd.read_csv('MENSAJE_RECHAZO.csv',encoding='latin-1')
+#df=df.drop('Unnamed: 0',axis=1)
+#st.text('Es posible identificar el motivo de rechazo por el cual el proceso se suspendió.')
+#fig=px.pie(df,values='FRECUENCIA',names='MENSAJE_RECHAZO',width=750,height=500)
 #,width=500,height=400)
-st.plotly_chart(fig)
+#st.plotly_chart(fig)
 
