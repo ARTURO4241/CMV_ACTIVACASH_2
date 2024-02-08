@@ -133,8 +133,8 @@ fig=px.pie(df,values='FRECUENCIA',names='MENSAJE_RECHAZO',width=750,height=500)
 st.plotly_chart(fig)
 
 st.markdown(f'SEGMENTACION DE EVALUADOS')
-df=pd.DataFrame({'ESTATUS':['APROBADO','RECHAZADO'],
-                'CANTIDAD':[fun.iloc[-1]['VALOR'],rechazo]})
-st.text('La proporcion correspondiente a la cantidad de aprobados y rechazados es:')
-fig=px.pie(df,values='CANTIDAD',names='ESTATUS',width=750,height=500)
+df=pd.read_csv('AP_RE.csv',encoding='latin-1')
+df=df.drop('Unnamed: 0',axis=1)
+st.text('Se puede realizar una segmentación de los usuarios evaluados.')
+fig=px.pie(df,values='FRECUENCIA',names='ETIQUETA',width=750,height=500)
 st.plotly_chart(fig)
