@@ -22,7 +22,7 @@ st.text('La presente página permite visualizar el comportamiento generalizado d
 #st.write(df_2)
 
 st.markdown(f' FUNNEL')
-df=pd.read_csv('FUNEL.csv',encoding='latin-1')
+fun=pd.read_csv('FUNEL.csv',encoding='latin-1')
 #fig = px.funnel(data, x='number', y='stage')
 #st.ploty_chart(fig)
 #fig.show()
@@ -30,7 +30,7 @@ df=pd.read_csv('FUNEL.csv',encoding='latin-1')
 #data = dict(
  #   number=[39, 27.4, 20.6, 11, 2],
   #  stage=["Website visit", "Downloads", "Potential customers", "Requested price", "invoice sent"])
-fig = px.funnel(df, x=df['VALOR'], y=df['PASO'])
+fig = px.funnel(fun, x=fun['VALOR'], y=fun['PASO'])
 st.plotly_chart(fig)
 
 
@@ -107,6 +107,7 @@ df=pd.read_csv('RECHAZADO.csv',encoding='latin-1')
 df=df.drop('Unnamed: 0',axis=1)
 df['NUMERO_SOCIO']=list(map(reemplazos,df['NUMERO_SOCIO']))
 df['CELULAR']=list(map(reemplazos,df['CELULAR']))
+rechazo=len(df)
 st.write(df)
 
 st.markdown(f' SISTEMA OPERATIVO')
@@ -131,3 +132,9 @@ st.text('Es posible identificar el motivo de rechazo por el cual el proceso se s
 fig=px.pie(df,values='FRECUENCIA',names='MENSAJE_RECHAZO',width=750,height=500)
 st.plotly_chart(fig)
 
+st.markdown(f'SEGMENTACION DE EVALUADOS')
+df=pd.DataFrame({'ESTATUS':['APROBADO','RECHAZADO'],
+                'CANTIDAD':[fun.iloc[-1]['VALOR'],rechazo]})
+st.text('La proporcion correspondiente a la cantidad de aprobados y rechazados es:')
+fig=px.pie(df,values='CANTIDAD',names='ESTATUS',width=750,height=500)
+st.plotly_chart(fig)
