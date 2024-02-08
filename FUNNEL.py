@@ -86,7 +86,7 @@ st.pydeck_chart(pdk.Deck(
 #st.plotly_chart(fig)
 
 
-st.markdown(f' POR EVALUAR')
+st.markdown(f' ABANDONARON EN HOME O DATOS PERSONALES')
 df=pd.read_csv('POR EVALUAR.csv',encoding='latin-1')
 df=df.drop('Unnamed: 0',axis=1)
 df['NUMERO_SOCIO']=list(map(reemplazos,df['NUMERO_SOCIO']))
