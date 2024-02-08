@@ -1,13 +1,15 @@
 ,NAVEGADOR,FRECUENCIA
-0,Chrome,13016
-1,Not A(Brand,1359
+0,Chrome,13064
+1,Not A(Brand,1632
 2,Safari,1011
-3,Samsung,367
-4,Not_A Brand,220
-5,MS-Edge-Chromium,186
-6, Not A;Brand,186
-7,Not/A)Brand,41
-8,Google Chrome,39
-9,Opera,29
-10,MS-Edge,19
-11,Firefox,7
+3,Not_A Brand,398
+4,Samsung,368
+5, Not A;Brand,202
+6,MS-Edge-Chromium,186
+7,Not/A)Brand,57
+8,Google Chrome,47
+9, Not;A Brand,33
+10,Opera,29
+11,MS-Edge,19
+12,Chromium,12
+13,Firefox,7
