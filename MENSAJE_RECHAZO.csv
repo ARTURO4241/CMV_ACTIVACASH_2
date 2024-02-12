@@ -1,7 +1,7 @@
 ,MENSAJE_RECHAZO,FRECUENCIA
-0,No cumple con Score,627
-1,VACIO,117
-2,El socio tiene domicilio en una region no operable,44
+0,No cumple con Score,637
+1,VACIO,119
+2,El socio tiene domicilio en una region no operable,46
 3,ICC < 5,14
 4,Los calculos de evaluación no aprobaron un crédito por falta de capacidad,10
 5,"El socio supera la edad, no procede el credito",3
