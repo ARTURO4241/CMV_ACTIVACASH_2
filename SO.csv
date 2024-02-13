@@ -1,14 +1,13 @@
 ,SISTEMA,FRECUENCIA
-0,Android,12682
-1,Android 10,2590
-2,iOS,1982
-3,Windows,707
-4,Android 11,211
-5,Android 9,130
-6,Linux,106
-7,Android 12,97
-8,Win64,56
-9,Android 13,42
-10,Mac,19
-11,Android 6.0.1,4
-12,Chrome-OS,3
+0,Android,2425
+1,iOS,551
+2,Windows,146
+3,Android 10,122
+4,Linux,11
+5,Mac,10
+6,Android 13,5
+7,Android 12,5
+8,Android 9,4
+9,Win64,3
+10,Android 11,2
+11,Chrome-OS,2
