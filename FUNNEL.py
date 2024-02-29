@@ -93,11 +93,11 @@ st.pydeck_chart(pdk.Deck(
 #st.write(df)
 
 
-st.markdown(f' APROBADOS QUE ABANDONARON DURANTE EL PROCESO')
-df=pd.read_csv('EN PROCESO.csv',encoding='latin-1')
-df=df.drop('Unnamed: 0',axis=1)
-df['CELULAR']=list(map(reemplazos,df['CELULAR']))
-st.write(df)
+#st.markdown(f' APROBADOS QUE ABANDONARON DURANTE EL PROCESO')
+#df=pd.read_csv('EN PROCESO.csv',encoding='latin-1')
+#df=df.drop('Unnamed: 0',axis=1)
+#df['CELULAR']=list(map(reemplazos,df['CELULAR']))
+#st.write(df)
 
 
 st.markdown(f' RECHAZADOS')
