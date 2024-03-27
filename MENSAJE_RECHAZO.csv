@@ -1,10 +1,10 @@
 ,MENSAJE_RECHAZO,FRECUENCIA
-0,No cumple con Score,622
-1,El socio tiene domicilio en una region no operable,43
+0,No cumple con Score,635
+1,El socio tiene domicilio en una region no operable,44
 2,ICC < 5,14
 3,Los calculos de evaluación no aprobaron un crédito por falta de capacidad,9
 4,"El socio supera la edad, no procede el credito",4
-5,El socio tiene en su historial un credito agrupado,2
-6,Se encuentra clave(s) de observación,2
+5,Se encuentra clave(s) de observación,3
+6,El socio tiene en su historial un credito agrupado,2
 7,El socio presenta mora maxima interna de 60,1
 8,ICC < 3,1
